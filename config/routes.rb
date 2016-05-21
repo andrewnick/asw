@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { sessions: 'users/sessions' }
   resources :users
 
   devise_scope :user do
     get "/login" => "devise/sessions#new"
   end
+
 
   root 'pages#home'
 

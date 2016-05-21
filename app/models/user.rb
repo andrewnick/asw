@@ -9,6 +9,10 @@ class User < ActiveRecord::Base
 		"#{first_name} #{last_name}"
 	end
 
+	def family
+		where(family_name: self.family_name) 
+	end
+
 	def email_required?
 		false
 	end

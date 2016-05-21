@@ -24,12 +24,11 @@ end
 RSpec.configure do |config|
 
   config.include Rails.application.routes.url_helpers
-  # config.include Devise::Test::IntegrationHelpers, type: :feature
 
   config.use_transactional_fixtures = false
 
   config.include FactoryGirl::Syntax::Methods
-  # config.include(UserHelpers)
+  config.include(UserHelper)
   config.order = "random"
 
   config.before(:suite) do
