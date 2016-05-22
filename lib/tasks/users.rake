@@ -4,7 +4,7 @@ namespace :user do
   	first_name = "Andrew"
   	last_name = "Nicholas"
   	name = "#{first_name} #{last_name}"
-  	user = User.create!(first_name: first_name, last_name: last_name, name: name, email: 'email@email.com', :password => "aswedding")
+  	user = User.create!(first_name: first_name, last_name: last_name, family_name: last_name, name: name, email: 'email@email.com', :password => "aswedding")
   	puts "Created user #{first_name} #{last_name}"
   end
 end

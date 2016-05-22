@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :families
   devise_for :users, controllers: { sessions: 'users/sessions' }
   resources :users
 
@@ -10,6 +11,7 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   get "rsvp" => "pages#rsvp"
+  post "family_update" => "pages#family_update"
   get "gift-registry" => "pages#registry"
   get "directions" => "pages#directions"
 

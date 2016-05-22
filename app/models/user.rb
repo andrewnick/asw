@@ -5,12 +5,14 @@ class User < ActiveRecord::Base
 
 	validates :name, presence: true
 
+	belongs_to :family
+
 	def name
 		"#{first_name} #{last_name}"
 	end
 
-	def family
-		where(family_name: self.family_name) 
+	def self.family(family_name)
+		 where(family_name: family_name)
 	end
 
 	def email_required?
