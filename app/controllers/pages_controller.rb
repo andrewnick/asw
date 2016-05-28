@@ -1,3 +1,5 @@
+require 'google_sheets'
+
 class PagesController < ApplicationController
 	before_action :authenticate_user!
 	before_action :set_family, only: [:rsvp, :family_update]
@@ -24,7 +26,23 @@ class PagesController < ApplicationController
 	end
 
 	def registry
-		
+		@registry = Registry.all
+	end
+
+	# update registry
+	# @params registry_item_id
+	def add_to_registry
+		@user = current_user
+		@registry = Registry::find(:id);
+		respond_to do |format|
+		  if @registry.update(regirstry_params)
+		    format.html { redirect_to @user, notice: 'User was successfully updated.' }
+		    format.json { render :show, status: :ok, location: @user }
+		  else
+		    format.html { render :edit }
+		    format.json { render json: @user.errors, status: :unprocessable_entity }
+		  end
+		end
 	end
 
 	def location
@@ -38,5 +56,4 @@ class PagesController < ApplicationController
 		def family_params
 			params.require(:family).permit(:family_name, users_attributes: [:id, :attending, :first_name])
 		end
-
 end

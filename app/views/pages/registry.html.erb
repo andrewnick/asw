@@ -1,1 +1,13 @@
 <h1>Registry</h1>
+<ul>
+<% @registry.each do |registry| %>
+	<%#= form_for registry, url: add_to_registry_path, method: :post do |m| %>
+		<li>
+			<%= hidden_field registry.id %>
+			<%#= m.check_box :chosen %>
+			<%#= m.text_field :item, readonly: true%>
+			<%#= m.submit "Enter" %>
+		</li>
+	<%# end %>
+<% end %>
+</ul>
