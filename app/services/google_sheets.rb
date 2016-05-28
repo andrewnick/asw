@@ -15,12 +15,20 @@ class Sheets
 		@ws.save
 	end
 
-	def add_names(first_name, last_name)
-		@ws.list.push({"First Name" => first_name, "Last Name" => last_name})
-		@ws.save
+	# def add_names(first_name, last_name)
+	# 	@ws.list.push({"First Name" => first_name, "Last Name" => last_name})
+	# 	@ws.save
+	# end
+
+	def get_column(col_name)
+		column = []
+		@ws.list.each do |col|
+			column.push(col.input_value(col_name))
+		end
+		return column
 	end
 
-	def get_hash
+	def get_sheet_array
 		@ws.list.to_hash_array
 	end
 

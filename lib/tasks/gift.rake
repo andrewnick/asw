@@ -1,8 +1,11 @@
 namespace :gift do
   desc "Will create user account for Andrew and Sarah"
   task :list => :environment do
-  	5.times do
-  		Gift.create!(item: "Bed")
+  	@registry = GiftRegistrySheets.new()
+  	gifts = @registry.get_items()
+
+  	gifts.each do |gift|
+  		Gift.update(item: gift, chosen: false)
   	end
   end
 end
