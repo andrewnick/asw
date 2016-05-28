@@ -1,9 +1,11 @@
 @Gift = React.createClass
 	handleUpdate: (e) ->
-		console.log @props
-		# e.preventDefault()
+		if ReactDOM.findDOMNode(@refs.chosen).checked
+			user_id = @props.current_user
+
 		data =
 			chosen: ReactDOM.findDOMNode(@refs.chosen).checked
+			user_id: user_id
 		$.ajax
 	        method: 'PUT'
 	        url: "/gifts/#{ @props.gift.id }"
@@ -12,6 +14,7 @@
 	          gift: data
 	        success: (data) =>
 	          @props.handleUpdateGift @props.gift, data
+
 	render: ->
 		React.DOM.form
 			className: 'form-inline'
@@ -21,5 +24,12 @@
 				name: 'chosen'
 				defaultChecked: @props.gift.chosen
 				onClick: @handleUpdate
-				ref: 'chosen'	
+				ref: 'chosen'
+				disabled: !(@props.gift.user_id == @props.current_user ||  @props.gift.user_id == "")
 			React.DOM.div null, @props.gift.item
+			React.DOM.input
+				type: 'hidden'
+				name: 'user_id'
+				value: @props.gift.user_id == null ?  "" : @props.gift.user_id
+				onClick: @handleUpdate
+				ref: 'user_id'

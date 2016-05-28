@@ -11,12 +11,13 @@ class GiftsController < ApplicationController
 
 	def index
       @gifts = Gift.all
+      @user_id = current_user.id;
     end
 
     private
 
 		def gift_params
-			params.require(:gift).permit(:item, :chosen).merge(user_id: current_user.id)
+			params.require(:gift).permit(:item, :chosen, :user_id)
 		end
 
 	    def set_gift

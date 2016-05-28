@@ -17,4 +17,4 @@
         React.DOM.div
         	className: 'gift'
 	        for gift in @state.gifts
-	              React.createElement Gift, key: gift.id, gift: gift, handleUpdateGift: @updateGift
+	              React.createElement Gift, key: gift.id, gift: gift, handleUpdateGift: @updateGift, current_user: @props.current_user
