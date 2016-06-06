@@ -13,7 +13,6 @@ Rails.application.routes.draw do
 
   get "rsvp" => "pages#rsvp"
   post "family_update" => "pages#family_update"
-  get "gift-registry" => "pages#registry"
   post "add_to_registry" => "pages#add_to_registry"
   get "directions" => "pages#directions"
 

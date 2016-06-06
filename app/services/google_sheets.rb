@@ -32,6 +32,12 @@ class Sheets
 		@ws.list.to_hash_array
 	end
 
+	def get_list
+		@ws.list
+	end
+
+
+
 	# family => {family_name: 'family_name', user: {first_name: name, last_name: name}}
 	def save_users(user_list)
 		family_u = []
