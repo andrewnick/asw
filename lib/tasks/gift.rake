@@ -1,5 +1,5 @@
 namespace :gift do
-  desc "Will create user account for Andrew and Sarah"
+  desc "Will pull gift registry into"
   task :list => :environment do
   	@registry = GiftRegistrySheets.new()
   	gifts = @registry.get_items()

@@ -7,4 +7,9 @@ namespace :user do
   	user = User.create!(first_name: first_name, last_name: last_name, family_name: last_name, name: name, email: 'email@email.com', :password => "aswedding")
   	puts "Created user #{first_name} #{last_name}"
   end
+
+  task :add_users => :environment do
+  	sheet = UserSheets.new()
+  	sheet.save_users()
+  end
 end
