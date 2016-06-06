@@ -26,7 +26,9 @@
 				onClick: @handleUpdate
 				ref: 'chosen'
 				disabled: !(@props.gift.user_id == @props.current_user ||  @props.gift.user_id == null)
-			React.DOM.div null, @props.gift.item
+			React.DOM.label
+				name: 'chosen'
+				value: @props.gift.item
 			React.DOM.input
 				type: 'hidden'
 				name: 'user_id'
