@@ -5,13 +5,22 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script src="https://use.typekit.net/zct7tvj.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body>
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
-	
+	<% flash.each do |key, value| %>
+	  <span class='<%="flash flash-#{key}"%>'><%= value %></span>
+	  <script type="text/javascript">
+	    if ($(".flash.flash-alert").length){
+	      toastr.warning($(".flash.flash-alert"), {timeOut: 10000});
+	    }
+	    if ($(".flash.flash-notice").length){
+	      toastr.success($(".flash.flash-notice"), {timeOut: 10000});
+	    }
+	  </script>
+	<% end %>
 	<%= render partial: 'layouts/nav' %>
 	<%= yield %>
-
 </body>
 </html>

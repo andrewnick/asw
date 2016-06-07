@@ -45,7 +45,7 @@ class PagesController < ApplicationController
 		end
 	end
 
-	def location
+	def details
 		
 	end
 

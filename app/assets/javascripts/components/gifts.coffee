@@ -11,9 +11,6 @@
     render: ->
       React.DOM.div
         className: 'gifts'
-        React.DOM.h2
-          className: 'item'
-          'Gifts'
         React.DOM.div
         	className: 'gift'
 	        for gift in @state.gifts

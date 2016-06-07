@@ -1,36 +1,41 @@
-<h1>RSVP</h1>
+<div class="container">
+	<div class="container-center">
+		<h1>RSVP</h1>
+	</div>
+	<div class="container-center">
+		<ul class="list">
+			<%#= debug( @family.users) %>
+			<% if @family.present? %>
+				<%= form_for @family, url: family_update_path, method: :post	 do |f| %>
+				  <% if @family.errors.any? %>
+				    <div id="error_explanation">
+				      <h2><%= pluralize(@family.errors.count, "error") %> prohibited this family from being saved:</h2>
 
-<ul>
-	<%#= debug( @family.users) %>
-	<% if @family.present? %>
-		<%= form_for @family, url: family_update_path, method: :post	 do |f| %>
-		  <% if @family.errors.any? %>
-		    <div id="error_explanation">
-		      <h2><%= pluralize(@family.errors.count, "error") %> prohibited this family from being saved:</h2>
+				      <ul>
+				      <% @family.errors.full_messages.each do |message| %>
+				        <li><%= message %></li>
+				      <% end %>
+				      </ul>
+				    </div>
+				  <% end %>
 
-		      <ul>
-		      <% @family.errors.full_messages.each do |message| %>
-		        <li><%= message %></li>
-		      <% end %>
-		      </ul>
-		    </div>
-		  <% end %>
+					<ul class="list">
+						<%= f.fields_for :users do |m| %>
+					      <li>
+					        <%= m.check_box :attending %>
+					        <%= m.text_field :first_name, readonly: true%>
+					      </li>
+					    <% end %>
+					</ul>
 
-			<ul>
-				<%= f.fields_for :users do |m| %>
-			      <li>
-			        <%= m.check_box :attending %>
-			        <%= m.text_field :first_name, readonly: true%>
-			      </li>
-			    <% end %>
-			</ul>
+					<div class="actions">
+						<%= f.submit 'RSVP' %>
+					</div>
+				<% end %>
 
-			<div class="actions">
-				<%= f.submit 'RSVP' %>
-			</div>
-		<% end %>
-
-	<% else %>
-		<li>Oops! It looks like something has gone wrong and we can't find <you class=""></you></li>
-	<% end %>
-</ul>
+			<% else %>
+				<li>Oops! It looks like something has gone wrong and we can't find <you class=""></you></li>
+			<% end %>
+		</ul>
+	</div>
+</div>

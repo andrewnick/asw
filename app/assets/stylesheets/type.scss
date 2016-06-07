@@ -1,0 +1,23 @@
+body,
+html {
+    font-family: "acumin-pro",sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color: #fff;
+	color: #333;
+	font-weight: 100;
+}
+
+h1, h2, h3 {
+	font-family: "proxima-nova",sans-serif;
+	font-weight: 100;
+}
+
+a {
+	text-decoration: none;
+
+	&:visited {
+		color: $text-body;
+	}
+}
+
+

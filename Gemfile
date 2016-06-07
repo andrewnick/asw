@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
-
+source 'https://rails-assets.org' do
+  gem 'rails-assets-toastr'
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
@@ -13,7 +15,7 @@ gem 'turbolinks', '~> 5.x'
 gem 'jbuilder', '~> 2.0'
 gem 'google_drive'
 gem 'react-rails'
-
+gem 'normalize-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
