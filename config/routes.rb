@@ -4,12 +4,14 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { sessions: 'users/sessions' }
   resources :users
 
-  devise_scope :user do
-    get "/login" => "devise/sessions#new"
+
+  devise_for :users, :skip => [:sessions]
+  as :user do
+    get 'login' => 'devise/sessions#new', :as => :login
+    delete 'logout' => 'devise/sessions#destroy', :as => :logout
   end
 
-
-  root 'pages#home'
+  root to: 'pages#home'
 
   get "rsvp" => "pages#rsvp"
   post "family_update" => "pages#family_update"

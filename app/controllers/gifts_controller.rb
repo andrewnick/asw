@@ -1,5 +1,7 @@
 class GiftsController < ApplicationController
  	before_action :set_gift, only: [:update]
+  before_action :authenticate_user!
+
 
 	def update
       if @gift.update(gift_params)
