@@ -1,3 +1,134 @@
 // Place all the styles related to the gifts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.gifts {
+	@include respond($device-width-md) {
+		-webkit-columns: 3;
+		   -moz-columns: 3;
+		        columns: 3;
+	}
+}
+
+.gift-item {
+	display: none;
+	&:checked {
+		 + .gift-item-label {
+			text-decoration: line-through;
+		}
+	}
+
+	&:disabled {
+		+ .gift-item-label {
+			
+		}
+	}
+}
+
+.gift {
+	.form-inline {
+	    background: transparent;
+	    position: relative;
+	    padding: 5px 15px;
+	    margin-bottom: 10px;
+		cursor: pointer;
+
+		&:hover {
+
+			.gift-item-label {
+				transition: color $transition-speed-text ease-out;
+			}
+
+			&:before {
+				width: 100%;
+			}
+		}
+
+		.gift-item-label {
+			position: relative;
+			transition: color $transition-speed-text ease-out;
+		}
+
+		&:before {
+			content: '';
+		    position: absolute;
+		    left: 0;
+		    top: 0;
+		    height: 100%;
+		    width: 0%;
+		    -webkit-transition: width $transition-speed-bg ease-out;
+		}
+
+		&:nth-child(5n + 1) {
+			&:hover {
+				.gift-item-label {
+					color: #FFF;
+				}
+			}
+
+			&:before {
+				background: $green;
+			}
+		}
+
+		&:nth-child(5n+ 2) {
+			&:before {
+				background: $yellow;
+			}
+		}
+
+		&:nth-child(5n + 3) {
+			&:before {
+				background: $orange;
+			}
+		}
+
+		&:nth-child(5n + 4) {
+			&:hover {
+				.gift-item-label {
+					color: #FFF;
+				}
+			}
+
+			&:before {
+				background: $maroon;
+			}
+		}
+
+		&:nth-child(5n + 5) {
+			
+			&:hover {
+				.gift-item-label {
+					color: #FFF;
+				}
+			}
+
+			&:before {
+				background: $red;
+			}
+		}
+
+		&.form-disabled {
+			cursor: auto;
+
+			.gift-item-label {
+				color: $text-body-disabled;
+				cursor: auto;
+			}
+
+			&:before {
+				background: none;
+			}
+
+			&:hover {
+				.gift-item-label {
+					color: $text-body-disabled;
+				}
+			}
+		}
+	}
+}
+
+.gift-item-label {
+	cursor: pointer;
+}
+

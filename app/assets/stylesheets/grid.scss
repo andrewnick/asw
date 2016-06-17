@@ -1,4 +1,13 @@
+.container {
+	max-width: 1000px;
+}
+
 .container-center {
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.col-full {
+	flex:  0 0 100%;
 }

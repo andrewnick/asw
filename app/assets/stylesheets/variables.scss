@@ -1,4 +1,5 @@
 $text-body: #333;
+$text-body-disabled: #CACACA;
 
 // Colour
 $green: #1CA37B;
@@ -6,3 +7,10 @@ $yellow: #FAEC29;
 $orange: #FF8913;
 $maroon: #C62F62;
 $red: #CF3944;
+
+$page-title: $green;
+
+$device-width-sm: 568px;
+$device-width-md: 768px;
+$device-width-lg: 1024px;
+$device-width-xl: 1280px;

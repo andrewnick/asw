@@ -1,0 +1,13 @@
+/* mixins to make our lives easier */
+ 
+@mixin respond($breakpoint){
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin respond_max($breakpoint){
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
