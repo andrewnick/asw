@@ -1,7 +1,11 @@
 .hidden-desktop {
-
+	@include respond($device-width-sm) {
+		display: none !important;
+	}
 }
 
-.hidden-xs {
-
+.hidden-mobile {
+	@include respond_max($device-width-sm - 1) {
+		display: none !important;
+	}
 }

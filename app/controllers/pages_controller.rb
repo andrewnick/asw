@@ -16,10 +16,10 @@ class PagesController < ApplicationController
 	def family_update
 	    respond_to do |format|
 	      if @family.update(family_params)
-	        format.html { redirect_to rsvp_path, notice: "Thanks, you have sucessfully RSVP'd." }
+	        format.html { redirect_to rsvp_path, notice: "Thanks for your RSVP! We look forward to seeing you at the wedding!" }
 	        format.json { render :show, status: :ok, location: @family }
 	      else
-	        format.html { redirect_to rsvp_path, warning: "It looks like this didn't work" }
+	        format.html { redirect_to rsvp_path, warning: "Oops, It looks like this didn't work" }
 	        format.json { render json: @family.errors, status: :unprocessable_entity }
 	      end
 	    end

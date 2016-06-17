@@ -1,7 +1,9 @@
-<div class="container-center page-heading">
-	<h1 class="col-full text-center page-title">Gifts</h1>
-	<p class="col-full text-center page-message">(click to reserve)</p>
-</div>
-<div class="container-center gifts">
-	<%= react_component 'Gifts', { data: @gifts, current_user: @user_id } %>
+<div class="container">
+	<div class="container-center page-heading">
+		<h1 class="col-full text-center page-title">Gift Registry</h1>
+		<p class="col-full text-center page-message">(click to reserve)</p>
+	</div>
+	<div class="container-center gifts">
+		<%= react_component 'Gifts', { data: @gifts, current_user: @user_id } %>
+	</div>
 </div>

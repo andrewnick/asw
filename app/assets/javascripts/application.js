@@ -17,4 +17,6 @@
 //= require react_ujs
 //= require components
 //= require toastr
+//= require velocity
+// require velocity-ui
 //= require_tree .

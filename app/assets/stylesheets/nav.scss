@@ -12,7 +12,7 @@ $transition-speed-text: 0.2s;
 	    background: transparent;
 	    position: relative;
 	    padding: 5px 15px;
-
+		text-align: center;
 		&:hover {
 
 			a {
@@ -89,3 +89,13 @@ $transition-speed-text: 0.2s;
 		}
 	}	
 }
+
+.nav-mobile {
+	width: 100%;
+	display: none;
+	li {
+		padding: 15px;
+		display: block;
+	}
+}
+

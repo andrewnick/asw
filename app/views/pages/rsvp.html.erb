@@ -1,10 +1,9 @@
 <div class="container">
-	<div class="container-center">
-		<h1>RSVP</h1>
+	<div class="container-center page-heading">
+		<h1 class="page-title">RSVP</h1>
 	</div>
 	<div class="container-center">
 		<ul class="list">
-			<%#= debug( @family.users) %>
 			<% if @family.present? %>
 				<%= form_for @family, url: family_update_path, method: :post	 do |f| %>
 				  <% if @family.errors.any? %>
