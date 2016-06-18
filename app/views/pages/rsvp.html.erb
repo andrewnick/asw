@@ -1,11 +1,12 @@
 <div class="container">
 	<div class="container-center page-heading">
 		<h1 class="page-title">RSVP</h1>
+		<p class="col-full text-center page-message">(click and submit to RSVP)</p>
 	</div>
 	<div class="container-center">
-		<ul class="list">
+		<ul class="list rsvp-form">
 			<% if @family.present? %>
-				<%= form_for @family, url: family_update_path, method: :post	 do |f| %>
+				<%= form_for @family, url: family_update_path, method: :post do |f| %>
 				  <% if @family.errors.any? %>
 				    <div id="error_explanation">
 				      <h2><%= pluralize(@family.errors.count, "error") %> prohibited this family from being saved:</h2>
@@ -18,22 +19,22 @@
 				    </div>
 				  <% end %>
 
-					<ul class="list">
-						<%= f.fields_for :users do |m| %>
-					      <li>
-					        <%= m.check_box :attending %>
-					        <%= m.text_field :first_name, readonly: true%>
+					<ul class="list rsvp-list">
+						<%= f.fields_for :users, f.object.users.order(:name) do |m| %>
+					      <li class="rsvp-item">
+					      	<%= m.check_box :attending, class:"rsvp-checkbox" %>
+					        <%= m.label :attending, m.object.first_name, class:"rsvp-label" %>
 					      </li>
 					    <% end %>
 					</ul>
 
-					<div class="actions">
-						<%= f.submit 'RSVP' %>
+					<div class="rsvp-submit">
+						<%= f.submit 'Submit', class:"btn btn-yellow btn-full" %>
 					</div>
 				<% end %>
 
 			<% else %>
-				<li>Oops! It looks like something has gone wrong and we can't find <you class=""></you></li>
+				<li>Oops! It looks like something has gone wrong and we can't find you"</li>
 			<% end %>
 		</ul>
 	</div>

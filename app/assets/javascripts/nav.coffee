@@ -25,9 +25,4 @@ mobileNav = ->
 			$nav.velocity "slideUp", {duration: 500}
 		
 $(document).on 'turbolinks:load', ->
-	console.log("load");
 	mobileNav()
-
-# $(document).on 'turbolinks:change', ->
-# 	console.log('change');
-# 	mobileNav()

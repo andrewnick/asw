@@ -7,7 +7,6 @@
       index = @state.gifts.indexOf gift
       gifts = React.addons.update(@state.gifts, { $splice: [[index, 1, data]] })
       @replaceState gifts: gifts
-      # console.log(@state.gifts)
     render: ->
       React.DOM.div
         className: 'gifts'

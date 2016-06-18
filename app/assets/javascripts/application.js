@@ -18,5 +18,4 @@
 //= require components
 //= require toastr
 //= require velocity
-// require velocity-ui
 //= require_tree .
