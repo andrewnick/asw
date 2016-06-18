@@ -1,0 +1,50 @@
+.rsvp-item {
+	position: relative;
+	padding: 5px 15px;
+    margin-bottom: 10px;
+
+    &:hover {
+    	background-color: $yellow;
+    }
+}
+
+.rsvp-checkbox {
+	display: none;
+
+	&:checked {
+		~ .rsvp-label {
+			&:after {
+				content: 'Attending';
+				color: $green;
+			}
+		}
+	}
+}
+
+.rsvp-label {
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	&:after {
+		content: 'Not Attending';
+		position: absolute;
+		right: 15px;
+    	width: 125px;
+		text-align: right;
+		color: $red;
+	}
+
+}
+
+.rsvp-form {
+	flex: 0 1 330px;
+}
+
+.rsvp-list {
+	margin-bottom: 40px;
+}
+
+.rsvp-submit {
+	padding: 0 15px;
+}
+
