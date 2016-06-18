@@ -21,7 +21,12 @@
 	    }
 	  </script>
 	<% end %>
-	<%= render partial: 'layouts/nav' %>
-	<%= yield %>
+
+	<% unless current_page?(controller: 'devise/sessions', action: 'new') %>
+		<%= render partial: 'layouts/nav' %>
+	<% end %>
+	<div class="container-pad">
+		<%= yield %>
+	</body>
 </body>
 </html>
