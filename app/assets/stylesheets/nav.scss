@@ -45,21 +45,25 @@ $transition-speed-text: 0.2s;
 					color: #FFF;
 				}
 			}
-
 			&:before {
-				background: $green;
+				background: $colour1;
 			}
 		}
 
 		&:nth-child(2) {
 			&:before {
-				background: $yellow;
+				background: $colour2;
 			}
 		}
 
 		&:nth-child(3) {
+			&:hover {
+				a {
+					color: #FFF;
+				}
+			}
 			&:before {
-				background: $orange;
+				background: $colour3;
 			}
 		}
 
@@ -71,7 +75,7 @@ $transition-speed-text: 0.2s;
 			}
 
 			&:before {
-				background: $maroon;
+				background: $colour4;
 			}
 		}
 
@@ -84,7 +88,7 @@ $transition-speed-text: 0.2s;
 			}
 
 			&:before {
-				background: $red;
+				background: $colour5;
 			}
 		}
 	}	

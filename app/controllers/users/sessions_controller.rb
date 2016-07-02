@@ -1,3 +1,5 @@
+require 'ext/string'
+
 class Users::SessionsController < Devise::SessionsController
    before_action :remove_white_space, only: [:create]
 # before_action :configure_sign_in_params, only: [:create]
@@ -35,6 +37,6 @@ class Users::SessionsController < Devise::SessionsController
   protected
 
     def remove_white_space
-        sign_in_params['name'].strip!
+        sign_in_params['name'].strip!.downcase!.titleize!
     end
 end

@@ -66,19 +66,19 @@
 			}
 
 			&:before {
-				background: $green;
+				background: $colour1;
 			}
 		}
 
 		&:nth-child(5n+ 2) {
 			&:before {
-				background: $yellow;
+				background: $colour2;
 			}
 		}
 
 		&:nth-child(5n + 3) {
 			&:before {
-				background: $orange;
+				background: $colour3;
 			}
 		}
 
@@ -90,7 +90,7 @@
 			}
 
 			&:before {
-				background: $maroon;
+				background: $colour4;
 			}
 		}
 
@@ -103,7 +103,7 @@
 			}
 
 			&:before {
-				background: $red;
+				background: $colour5;
 			}
 		}
 

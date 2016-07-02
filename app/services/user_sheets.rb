@@ -21,7 +21,7 @@ class UserSheets
 					puts item
 					puts @family
 				else
-					user[key] = item
+					user[key] = item.downcase.titleize
 				end
 			end
 			user['name'] = "#{user['first_name']} #{user['last_name']}"
