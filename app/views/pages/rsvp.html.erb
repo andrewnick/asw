@@ -25,6 +25,10 @@
 					      	<%= m.check_box :attending, class:"rsvp-checkbox" %>
 					        <%= m.label :attending, m.object.first_name, class:"rsvp-label" %>
 					      </li>
+					      <li class="rsvp-item">
+					        <%= m.label :dietary_requirements," Dietary Requirements?", class:"rsvp-dietary-label" %>
+					        <%= m.text_area :dietary_requirements, class:"rsvp-textarea" %>
+					      </li>
 					    <% end %>
 					</ul>
 
