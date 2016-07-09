@@ -12,7 +12,7 @@ class GiftsController < ApplicationController
     end
 
 	def index
-      @gifts = Gift.all
+      @gifts = Gift.all.order("LOWER(item)")
       @user_id = current_user.id;
     end
 
