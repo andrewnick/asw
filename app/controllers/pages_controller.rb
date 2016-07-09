@@ -16,7 +16,7 @@ class PagesController < ApplicationController
 	def family_update
 	    respond_to do |format|
 	      if @family.update(family_params)
-	        format.html { redirect_to rsvp_path, notice: "Thanks for your RSVP! We look forward to seeing you at the wedding!" }
+	        format.html { redirect_to rsvp_path, notice: "Thanks for your RSVP!" }
 	        format.json { render :show, status: :ok, location: @family }
 	      else
 	        format.html { redirect_to rsvp_path, warning: "Oops, It looks like this didn't work" }
@@ -54,6 +54,6 @@ class PagesController < ApplicationController
 			@family = Family.find(current_user.family)
 		end
 		def family_params
-			params.require(:family).permit(:family_name, users_attributes: [:id, :attending, :first_name])
+			params.require(:family).permit(:family_name, users_attributes: [:id, :status, :first_name, :dietary_requirements])
 		end
 end

@@ -9,3 +9,20 @@
 		display: none !important;
 	}
 }
+
+.hidden-element {
+	position: absolute;
+	visibility: hidden;
+    width: 0px;
+    height: 0px;
+    padding: 0;
+    margin: 0;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}

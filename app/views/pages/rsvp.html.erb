@@ -22,12 +22,33 @@
 					<ul class="list rsvp-list">
 						<%= f.fields_for :users, f.object.users.order(:name) do |m| %>
 					      <li class="rsvp-item">
-					      	<%= m.check_box :attending, class:"rsvp-checkbox" %>
-					        <%= m.label :attending, m.object.first_name, class:"rsvp-label" %>
-					      </li>
-					      <li class="rsvp-item">
-					        <%= m.label :dietary_requirements," Dietary Requirements?", class:"rsvp-dietary-label" %>
-					        <%= m.text_area :dietary_requirements, class:"rsvp-textarea" %>
+					      	<h2> <%= m.object.first_name %></h2>
+							<div class="rsvp-row">
+								<div class="rsvp-col">
+									<h3>Attending</h3>
+								</div>
+								<div class="rsvp-col">
+						        	<%= m.radio_button :status, 'attending' %> 
+							    	<%= m.label :status, 'Yes', class:"rsvp-label" %>
+							    	<%= m.radio_button :status, 'not_attending' %> 
+							    	<%= m.label :status, 'No', class:"rsvp-label" %>
+							    	<%= m.radio_button :status, 'no_reply', class:"hidden-element" %>
+							    </div>
+							</div>
+							<div class="rsvp-dietary rsvp-row">
+						        <div class="rsvp-col">
+									<h3>Dietary Requirements?</h3>
+								</div>
+								<div class="rsvp-col">
+							        <input type="radio" name="diet_<%= m.object.first_name %>" value="yes" class="radio-button">
+							        <%= label :diet, 'Yes', class:"rsvp-label" %>								
+							        <input type="radio" name="diet_<%= m.object.first_name %>" value="no" class="radio-button">
+							        <%= label :diet, 'No', class:"rsvp-label" %>
+						        </div>
+						        <div class="rsvp-col-full">	
+							    	<%= m.text_area :dietary_requirements, class:"rsvp-textarea hide" %>
+							    </div>
+							</div>
 					      </li>
 					    <% end %>
 					</ul>
