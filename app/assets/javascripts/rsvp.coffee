@@ -8,9 +8,7 @@ $(document).on 'turbolinks:load', ->
 			$(item).find('input[type="radio"][value="no"]').prop( "checked", true );
 
 	$('#edit_family_1 .rsvp-dietary').on 'change', ->
-		console.log($(this))
 		show = 	$(this).find('input:checked').val()
-		console.log(show);
 		if (show =='yes')
 			$(this).find('.rsvp-textarea').addClass('show').removeClass('hide')
 		else
