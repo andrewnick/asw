@@ -11,7 +11,12 @@ namespace :gift do
 
   desc "Will pull gift registry into"
   task :list => :environment do
-  	@registry = GiftRegistrySheets.new()
-  	gifts = @registry.set_items()
+    @registry = GiftRegistrySheets.new()
+    gifts = @registry.set_items()
+  end
+
+  task :remove_users => :environment do
+  	@gifts = Gift.all
+  	@gifts.update(user_id: nil)
   end
 end
