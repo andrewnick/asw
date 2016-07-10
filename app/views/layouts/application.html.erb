@@ -22,11 +22,20 @@
 	  </script>
 	<% end %>
 
-	<% unless current_page?(controller: 'devise/sessions', action: 'new') %>
+	<% unless current_page?(controller: 'devise/sessions', action: 'new') || current_page?(controller: 'pages', action: 'home') %>
 		<%= render partial: 'layouts/nav' %>
 	<% end %>
-	<div class="container-pad">
-		<%= yield %>
+
+	<% if current_page?(controller: 'pages', action: 'home') %>
+		<div class="container-pad home">
+			<%= yield %>
+		</div>
+	<% else%>
+		<div class="container-pad">
+			<%= yield %>
+		</div>
+	<% end %>
+	<%#= render partial: 'layouts/wet_wedding' %>
 	</body>
 </body>
 </html>

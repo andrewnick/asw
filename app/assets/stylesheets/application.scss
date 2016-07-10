@@ -28,4 +28,12 @@
  @import 'button';
  @import 'gifts';
  @import 'rsvp';
+ @import 'home-list';
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 

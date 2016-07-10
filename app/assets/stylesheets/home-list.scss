@@ -1,0 +1,116 @@
+.home {
+	min-height: 100vh;
+    flex-direction: column;
+    padding-top: 60px;
+}
+.home-inner {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-inner-center {
+	flex-wrap: wrap;
+    flex: 1 1 auto;
+}
+
+.home-title {
+	font-size: 28px;
+	margin-bottom: 0;
+	@include respond($device-width-sm) {
+		font-size: 48px;
+	}
+}
+
+.home-subtitle {
+	font-size: 18px;
+	margin-bottom: 0;
+	@include respond($device-width-sm) {
+		font-size: 24px;
+	}
+}
+
+.home-list  {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	a {
+		display: flex;
+		flex: 1 1 50%;
+		height: 30vh;
+		justify-content: center;
+		align-items: center;
+		transition: all 0.5s ease-out;
+		font-size: 24px;
+		font-weight: 100;
+		text-align: center;
+
+		li {
+			cursor: pointer;
+		}
+
+		&:focus,
+		&:active,
+		&:hover {
+			transition: all 0.5s ease-out;
+		}
+	
+
+		&:nth-child(5n + 1) {
+			&:focus,
+			&:active,
+			&:hover {
+				color: #FFF;
+				background: $colour1;
+				li { 
+					color: #FFF;
+				}
+			}
+		}
+
+		&:nth-child(5n+ 2) {
+			&:focus,
+			&:active,
+			&:hover {
+				background: $colour2;
+			}
+		}
+
+		&:nth-child(5n + 3) {
+			&:focus,
+			&:active,
+			&:hover {
+				color: #FFF;
+				background: $colour3;
+				li { 
+					color: #FFF;
+				}
+			}
+		}
+
+		&:nth-child(5n + 4) {
+			&:focus,
+			&:active,
+			&:hover {
+				color: #FFF;
+				background: $colour4;
+				li { 
+					color: #FFF;
+				}
+			}
+		}
+
+		&:nth-child(5n + 5) {
+			&:focus,
+			&:active,
+			&:hover {
+				color: #FFF;
+				background: $colour5;
+				li { 
+					color: #FFF;
+				}
+			}
+		}
+	}
+}

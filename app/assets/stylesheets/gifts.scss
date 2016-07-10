@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .gifts {
-	@include respond($device-width-md) {
+	@include respond($device-width-sm) {
 		-webkit-columns: 3;
 		   -moz-columns: 3;
 		        columns: 3;
@@ -77,6 +77,11 @@
 		}
 
 		&:nth-child(5n + 3) {
+			&:hover {
+				.gift-item-label {
+					color: #FFF;
+				}
+			}
 			&:before {
 				background: $colour3;
 			}

@@ -1,6 +1,7 @@
 .container {
-	max-width: 1000px;
-	margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .container-center {
@@ -9,10 +10,22 @@
 	flex-wrap: wrap;
 }
 
+.container-sb {
+	justify-content: space-between;
+}
+
 .container-pad {
 	padding: 20px;
+	display: flex;
+	margin: 0 auto;
+    max-width: 1000px;
 }
 
 .col-full {
 	flex:  0 0 100%;
+}
+
+.col-padding {
+	padding-left: 20px;
+	padding-right: 20px;
 }

@@ -46,7 +46,9 @@ class PagesController < ApplicationController
 	end
 
 	def details
-		
+	end
+
+	def tips_and_tricks
 	end
 
 	private

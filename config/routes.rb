@@ -17,5 +17,6 @@ Rails.application.routes.draw do
   post "family_update" => "pages#family_update"
   post "add_to_registry" => "pages#add_to_registry"
   get "details" => "pages#details"
+  get "tips-and-tricks" => "pages#tips_and_tricks"
 
 end
