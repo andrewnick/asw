@@ -12,6 +12,8 @@ class UserSheets
 
 	# family => {family_name: 'family_name', user: {first_name: name, last_name: name}}
 	def save_users()
+		User.delete_all
+		Family.delete_all
 		@registry.get_list.each do |item|
 			family = {}
 			user = {}
@@ -21,12 +23,12 @@ class UserSheets
 					puts item
 					puts @family
 				else
-					user[key] = item.downcase.titleize
+					user[key] = item.downcase
 				end
 			end
 			user['name'] = "#{user['first_name']} #{user['last_name']}"
 			user['password'] = 'aswedding'
-			user['attending'] = false
+			# user['attending'] = false
 			# family['user'] = user
 			# puts family.to_yaml
 			puts user

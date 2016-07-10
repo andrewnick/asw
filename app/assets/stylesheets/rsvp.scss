@@ -50,6 +50,11 @@
 	flex: 0 1 400px;
 }
 
+.rsvp-title {
+	text-transform: capitalize;
+	color: $blue;
+}
+
 .rsvp-list {
 	margin-bottom: 40px;
 }

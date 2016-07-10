@@ -22,7 +22,7 @@
 					<ul class="list rsvp-list">
 						<%= f.fields_for :users, f.object.users.order(:name) do |m| %>
 					      <li class="rsvp-item">
-					      	<h2> <%= m.object.first_name %></h2>
+					      	<h2 class="rsvp-title"> <%= m.object.first_name %></h2>
 							<div class="rsvp-row">
 								<div class="rsvp-col">
 									<h3>Attending</h3>
