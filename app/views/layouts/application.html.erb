@@ -22,11 +22,11 @@
 	  </script>
 	<% end %>
 
-	<% unless current_page?(controller: 'devise/sessions', action: 'new') || current_page?(controller: 'pages', action: 'home') %>
+	<% unless current_page?(controller: 'devise/sessions', action: 'new') || current_page?(controller: '/pages', action: 'home') %>
 		<%= render partial: 'layouts/nav' %>
 	<% end %>
 
-	<% if current_page?(controller: 'pages', action: 'home') %>
+	<% if current_page?(controller: '/pages', action: 'home') %>
 		<div class="container-pad home">
 			<%= yield %>
 		</div>
