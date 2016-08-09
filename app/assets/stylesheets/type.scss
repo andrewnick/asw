@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'daydreamerregular';
-    src: url('daydreamer-webfont.woff2') format('woff2'),
-         url('daydreamer-webfont.woff') format('woff');
+    src: font-url('daydreamer-webfont.woff2') format('woff2'),
+         font-url('daydreamer-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -9,8 +9,8 @@
 
 @font-face {
     font-family: 'hello_goodbyeregular';
-    src: url('hellogoodbye-webfont.woff2') format('woff2'),
-         url('hellogoodbye-webfont.woff') format('woff');
+    src: font-url('hellogoodbye-webfont.woff2') format('woff2'),
+         font-url('hellogoodbye-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
