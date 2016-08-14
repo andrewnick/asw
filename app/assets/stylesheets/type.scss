@@ -68,9 +68,39 @@ p {
 a {
 	text-decoration: none;
 	color: $text-body;
+  position: relative;
+
 	&:visited {
 		color: $text-body;
 	}
+}
+
+.link {
+  
+  height: 31px;
+
+  &:hover {
+    a {
+      transition: color $transition-speed-text ease-out;
+      color: $colour1-text;
+    }
+
+    &:before {
+      width: 100%;
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 0%;
+    -webkit-transition: width $transition-speed-bg ease-out;
+    background: $colour1;
+    z-index: 0;
+  }
 }
 
 .text-center {
@@ -95,6 +125,7 @@ h3 {
 h4 {
   font-size: 36px;
   margin-bottom: 0rem;
+  color: $blue;
 }
 
 h5 {
@@ -105,7 +136,7 @@ h5 {
 
 p, ul, ol, pre, table, blockquote {
   margin-top: 0rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 

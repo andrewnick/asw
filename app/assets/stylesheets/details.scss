@@ -1,0 +1,38 @@
+.details-section {
+	margin-bottom: 40px;
+}
+
+.details-details {
+
+	margin-bottom: 40px;
+
+	@include respond($device-width-md) {
+		margin-right: 20px;
+	}
+
+	h4 {
+		margin-bottom: 1rem;
+	}
+}
+
+.details-content-wrapper {
+	display: flex;
+	margin-bottom: 1rem;
+	flex-wrap: wrap;
+}
+
+.details-title {
+	flex: 1 1 20%;
+}
+
+.details-content {
+	flex: 0 0 100%;
+
+	// @include respond($device-width-sm) {
+	// 	flex: 0 0 100%;
+	// }
+
+	@include respond($device-width-md) {
+		flex: 1 1 80%;
+	}
+}
