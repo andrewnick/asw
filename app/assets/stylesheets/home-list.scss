@@ -30,6 +30,19 @@
 	// }
 }
 
+.home-image {
+	width: 420px;
+}
+
+.home-nav {
+	li {
+		font-size: 48px;
+		font-family: $font-amatic;
+		text-transform: uppercase;
+		padding: 5px 45px;
+	}
+}
+
 .home-list  {
 	display: flex;
 	justify-content: center;

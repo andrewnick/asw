@@ -28,10 +28,11 @@
 	<% if current_page?(controller: '/pages', action: 'home') %>
 		<div class="container-pad home">
 			<div class="border-img-wrapper">
-				<%= image_tag 'flowers-top-left-2.svg', class:"border-img border-img--left" %>
-				<%= image_tag 'flowers-top-right-2.svg', class:"border-img border-img--right" %>
+				<%= image_tag 'flowers-top-left-2.svg', class:"border-img border-img--left border-img--top" %>
+				<%= image_tag 'flowers-top-right-2.svg', class:"border-img border-img--right border-img--top" %>
+				<%= yield %>
+				<%= render partial: 'layouts/footer' %>
 			</div>
-			<%= yield %>
 		</div>
 	<% else %>
 		<div class="border-img-wrapper">

@@ -1,23 +1,31 @@
-<nav class="container-center home-inner-center">
-<!-- 	<div class="col-full">
-		<h3 class="text-center">What would you like to do?</h3>
-	</div> -->
+<!-- <nav class="container-center home-inner-center">
 	<div class="col-full">
 		<ul class="list home-list">
-			<% if user_signed_in? %>
-				<%= link_to rsvp_path do %>
+			<%# if user_signed_in? %>
+				<%#= link_to rsvp_path do %>
 					<li>RSVP</li>
-				<% end %>
-				<%= link_to gifts_path do %>
+				<%# end %>
+				<%#= link_to gifts_path do %>
 					<li>View the Gift Registry</li>
-				<% end %>
-				<%= link_to details_path do %>
+				<%# end %>
+				<%#= link_to details_path do %>
 					<li>Get the Details</li>
-				<% end %>
-				<%= link_to tips_and_tricks_path do %>
+				<%# end %>
+				<%#= link_to tips_and_tricks_path do %>
 					<li>Tips and Tricks</li>
-				<% end %>
-			<% end %>
+				<%# end %>
+			<%# end %>
 		</ul>
 	</div>
+</nav> -->
+
+<nav class="nav container-center">
+	<ul class="list list-horizontal nav-list home-nav">
+		<% if user_signed_in? %>
+			<li><%= link_to "RSVP" , rsvp_path %></li>
+			<li><%= link_to "Gift Registry" , gifts_path %></li>
+			<li><%= link_to "Details" , details_path %></li>
+			<li><%= link_to "Tips and Tricks" , tips_and_tricks_path %></li>
+		<% end %>
+	</ul>
 </nav>
