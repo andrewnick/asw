@@ -2,6 +2,8 @@ input {
 	padding: 10px 15px;
 	margin-top: 3px;
 	margin-bottom: 10px;
+	border: 1px solid $grey;
+	border-radius: 6px;
 }
 
 input:read-only {
@@ -9,10 +11,22 @@ input:read-only {
 }
 
 label {
+	font-size:  36px;
 	margin-bottom: 5px;
 	text-transform: capitalize;
 }
 
 [type="checkbox"], [type="radio"] {
 	margin-right: 10px;
+}
+
+.field {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+
+form {
+    min-width: 400px;
+
 }

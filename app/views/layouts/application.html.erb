@@ -6,8 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-  <script src="https://use.typekit.net/zct7tvj.js"></script>
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Athiti" rel="stylesheet">
 </head>
 <body>
 	<% flash.each do |key, value| %>
@@ -28,11 +27,19 @@
 
 	<% if current_page?(controller: '/pages', action: 'home') %>
 		<div class="container-pad home">
+			<div class="border-img-wrapper">
+				<%= image_tag 'flowers-top-left-2.svg', class:"border-img border-img--left" %>
+				<%= image_tag 'flowers-top-right-2.svg', class:"border-img border-img--right" %>
+			</div>
 			<%= yield %>
 		</div>
-	<% else%>
-		<div class="container-pad">
+	<% else %>
+		<div class="border-img-wrapper">
+			<%= image_tag 'flowers-top-left-2.svg', class:"border-img border-img--left" %>
+			<%= image_tag 'flowers-top-right-2.svg', class:"border-img border-img--right" %>
 			<%= yield %>
+			<%= image_tag 'flowers-top-left-2.svg', class:"border-img border-img--left" %>
+			<%= image_tag 'flowers-top-right-2.svg', class:"border-img border-img--right" %>
 		</div>
 	<% end %>
 	<%#= render partial: 'layouts/wet_wedding' %>

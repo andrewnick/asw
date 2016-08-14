@@ -2,16 +2,24 @@ $text-body: #333;
 $text-body-disabled: #CACACA;
 
 // Colour
-$green: #1CA37B;
-$yellow: #FAEC29;
-$orange: #FF8913;
-$maroon: #C62F62;
-$red: #CF3944;
-$green2: #3DC39C;
-$blue: #2A65B5;
+// $green: #1CA37B;
+// $yellow: #FAEC29;
+// $orange: #FF8913;
+// $maroon: #C62F62;
+// $red: #CF3944;
+// $green2: #3DC39C;
+// $blue: #2A65B5;
+// $grey: #cdd4d2;
+
+$green: #719E90;
+$yellow: #F7E923;
+$orange: #F68B21;
+$maroon: #E56395;
+$red: #C53062;
+$blue: #4E7BB0;
 $grey: #cdd4d2;
 
-$colour1: $green2;
+$colour1: $green;
 $colour2: $yellow;
 $colour3: $orange;
 $colour4: $maroon;
@@ -27,3 +35,8 @@ $device-width-xl: 1280px;
 
 $transition-speed-bg: 0.3s;
 $transition-speed-text: 0.2s;
+
+$font-athiti: 'Athiti', sans-serif;
+$font-amatic: 'Amatic SC', cursive;
+
+

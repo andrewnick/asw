@@ -1,45 +1,57 @@
-@font-face {
-    font-family: 'daydreamerregular';
-    src: font-url('daydreamer-webfont.woff2') format('woff2'),
-         font-url('daydreamer-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+// @font-face {
+//     font-family: 'daydreamerregular';
+//     src: font-url('daydreamer-webfont.woff2') format('woff2'),
+//          font-url('daydreamer-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
 
-}
+// }
 
-@font-face {
-    font-family: 'hello_goodbyeregular';
-    src: font-url('hellogoodbye-webfont.woff2') format('woff2'),
-         font-url('hellogoodbye-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+// @font-face {
+//     font-family: 'hello_goodbyeregular';
+//     src: font-url('hellogoodbye-webfont.woff2') format('woff2'),
+//          font-url('hellogoodbye-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
 
-}
+// }
+
 
 body,
 html {
     // font-family: "acumin-pro",sans-serif;
-    font-family: 'hello_goodbyeregular',sans-serif;
-    -webkit-font-smoothing: antialiased;
-    background-color: #fff;
+    // font-family: 'hello_goodbyeregular',sans-serif;
+  font-family: 'Athiti', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: #fff;
 	color: #333;
 	font-weight: 400;
 	font-style: normal;
-  font-size: 1.5rem;
-  line-height: 2.25rem;
+  font-size: 20px;
+  line-height: 1.5;
 
 	margin: 0 auto;
 }
 
+.font-athiti {
+  font-family: 'Athiti', sans-serif;
+
+}
+
+.font-amatic {
+  font-family: 'Amatic SC', cursive;
+}
+
 
 h1, h2, h3 {
-	font-family: 'daydreamerregular',sans-serif;
+	// font-family: 'daydreamerregular',sans-serif;
+  font-family: 'Amatic SC', cursive;
 	font-weight: 100;
 	margin-top: 0;
 }
 
 h1 {
-	color: $green;
+	color: $blue;
 }
 
 h2 {
@@ -66,117 +78,38 @@ a {
 	text-align: center;
 }
 
-body {
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.5rem;
-  line-height: 2.25rem;
+h1 {
+  font-size: 72px;
+  margin-bottom: 1rem;
 }
 
-h1 {
-  // font-family: inherit;
-  // font-weight: 600;
-  font-style: inherit;
-  font-size: 3.125rem;
-  line-height: 4.5rem;
-  margin-top: 2.25rem;
-  margin-bottom: 2.25rem;
-}
 h2 {
-  // font-family: inherit;
-  // font-weight: 600;
-  font-style: inherit;
-  font-size: 3.125rem;
-  line-height: 4.5rem;
-  margin-top: 2.25rem;
-  margin-bottom: 2.25rem;
+  font-size: 64px;
+  margin-bottom: 1rem;
 }
+
 h3 {
-  // font-family: inherit;
-  // font-weight: 600;
-  font-style: inherit;
-  font-size: 2.1875rem;
-  line-height: 2.25rem;
-  margin-top: 2.25rem;
+  font-size: 48px;
   margin-bottom: 0rem;
 }
+
 h4 {
-  // font-family: inherit;
-  // font-weight: 600;
-  font-style: inherit;
-  font-size: 1.5rem;
-  line-height: 2.25rem;
-  margin-top: 2.25rem;
+  font-size: 36px;
   margin-bottom: 0rem;
 }
+
 h5 {
-  // font-family: inherit;
-  // font-weight: 400;
   font-style: italic;
-  font-size: 1.5rem;
-  line-height: 2.25rem;
-  margin-top: 2.25rem;
+  font-size: 24px;
   margin-bottom: 0rem;
 }
+
 p, ul, ol, pre, table, blockquote {
   margin-top: 0rem;
   margin-bottom: 2.25rem;
 
 }
-// h1 {
-//   // font-family: inherit;
-//   font-weight: 600;
-//   font-style: inherit;
-//   font-size: 76px;
-//   line-height: 81px;
-//   margin-top: 27px;
-//   margin-bottom: 0px;
-// }
 
-// h2 {
-//   // font-family: inherit;
-//   // font-weight: 600;
-//   font-style: inherit;
-//   font-size: 47px;
-//   line-height: 54px;
-//   margin-top: 27px;
-//   margin-bottom: 27px;
-// }
-
-// h3 {
-//   // font-family: inherit;
-//   // font-weight: 600;
-//   font-style: inherit;
-//   font-size: 29px;
-//   line-height: 54px;
-//   margin-top: 27px;
-//   margin-bottom: 0px;
-// }
-
-// h4 {
-//   // font-family: inherit;
-//   // font-weight: 600;
-//   font-style: inherit;
-//   font-size: 18px;
-//   line-height: 27px;
-//   margin-top: 27px;
-//   margin-bottom: 0px;
-// }
-
-// h5 {
-//   // font-family: inherit;
-//   // font-weight: 400;
-//   font-style: italic;
-//   font-size: 18px;
-//   line-height: 27px;
-//   margin-top: 27px;
-//   margin-bottom: 0px;
-// }
-
-// p, ul, ol, pre, table, blockquote {
-//   margin-top: 0px;
-//   margin-bottom: 27px;
-// }
 
 ul ul, ol ol, ul ol, ol ul {
   margin-top: 0;

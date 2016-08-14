@@ -1,0 +1,42 @@
+.border-img-wrapper {
+    position: absolute;
+    top: 0;
+    margin: 20px;
+    left: 0;
+    right: 0;
+    padding: 80px;
+
+	// @include respond($device-width-sm) {
+	// }
+	// @include respond($device-width-md) {
+	// 	margin: 20px;
+	// }
+	
+	@include respond($device-width-xl) {
+		margin: 50px;
+	}	
+
+}
+
+.border-img {
+	position: absolute;
+	height: 245px;
+	width: 204px;
+	top: 0;
+}
+
+// .border-img {
+// 	position: absolute;
+// 	height: 176px;
+// 	width: 145px;
+// 	top: 0;
+// }
+
+.border-img--right{
+	right: 0;
+
+}
+
+.border-img--left{
+	left: 0;
+}
