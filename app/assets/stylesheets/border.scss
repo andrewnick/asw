@@ -4,13 +4,17 @@
     margin: 20px;
     left: 0;
     right: 0;
-    padding: 80px;
+    
 
 	// @include respond($device-width-sm) {
 	// }
 	// @include respond($device-width-md) {
 	// 	margin: 20px;
 	// }
+	padding: 80px 42px;
+	@include respond($device-width-sm) {
+		padding: 80px;
+	}
 
 	@include respond($device-width-xl) {
 		margin: 50px;
@@ -23,15 +27,22 @@
 }
 
 .border-img--top {
-	height: 245px;
-	width: 204px;
 	top: 0;	
+	width: 103px;
+	@include respond($device-width-sm) {
+		width: 204px;
+	}
 }
 
 .border-img--bottom {
-	width: 176px;
-	height: 107px;
+	width: 102px;
+	// height: 107px;
 	bottom: 0;	
+
+	width: 103px;
+	@include respond($device-width-sm) {
+		width: 176px;
+	}
 }
 
 .border-img--right{
