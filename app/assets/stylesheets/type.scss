@@ -108,13 +108,25 @@ a {
 }
 
 h1 {
-  font-size: 72px;
   margin-bottom: 1rem;
+  font-size: 36px;
+  @include respond($device-width-xs) {
+      font-size: 48px;
+  }
+  @include respond($device-width-sm) {
+    font-size: 72px;
+  }
 }
 
 h2 {
-  font-size: 64px;
   margin-bottom: 1rem;
+  font-size: 24px;
+  @include respond($device-width-xs) {
+      font-size: 36px;
+  }
+  @include respond($device-width-sm) {
+    font-size: 64px;
+  }
 }
 
 h3 {

@@ -8,12 +8,12 @@
   <div class="container-center">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'form-login' }) do |f| %>
       <div class="field">
-        <%= f.label :name, class: "font-amatic" %>
+        <%= f.label :name, class: "font-amatic" %> <br class="hidden-desktop">
         <%= f.text_field :name, autofocus: true %>
       </div>
 
       <div class="field">
-        <%= f.label :password, class: "font-amatic" %>
+        <%= f.label :password, class: "font-amatic" %> <br class="hidden-desktop">
         <%= f.password_field :password, autocomplete: "off" %>
       </div>
 
