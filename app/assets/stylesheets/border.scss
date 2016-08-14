@@ -11,7 +11,7 @@
 	// @include respond($device-width-md) {
 	// 	margin: 20px;
 	// }
-	
+
 	@include respond($device-width-xl) {
 		margin: 50px;
 	}	
@@ -20,17 +20,19 @@
 
 .border-img {
 	position: absolute;
-	height: 245px;
-	width: 204px;
-	top: 0;
 }
 
-// .border-img {
-// 	position: absolute;
-// 	height: 176px;
-// 	width: 145px;
-// 	top: 0;
-// }
+.border-img--top {
+	height: 245px;
+	width: 204px;
+	top: 0;	
+}
+
+.border-img--bottom {
+	width: 176px;
+	height: 107px;
+	bottom: 0;	
+}
 
 .border-img--right{
 	right: 0;
