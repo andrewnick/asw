@@ -3,6 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .gifts {
 	@include respond($device-width-sm) {
+		-webkit-columns: 2;
+		   -moz-columns: 2;
+		        columns: 2;
+	}
+
+	@include respond($device-width-md) {
 		-webkit-columns: 3;
 		   -moz-columns: 3;
 		        columns: 3;
@@ -29,8 +35,10 @@
 	    background: transparent;
 	    position: relative;
 	    padding: 12px 18px;
-	    margin-bottom: 10px;
+	    // margin-bottom: 10px;
 		cursor: pointer;
+		width: auto;
+		margin-bottom: 0;
 
 		&:hover {
 
@@ -46,6 +54,7 @@
 		.gift-item-label {
 			position: relative;
 			transition: color $transition-speed-text ease-out;
+			font-size: 20px;
 		}
 
 		&:before {
