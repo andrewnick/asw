@@ -12,6 +12,10 @@
 	    position: relative;
 	    padding: 5px 15px;
 		text-align: center;
+
+		font-size: 36px;
+		font-family: $font-amatic;
+
 		&:hover {
 
 			a {
@@ -36,12 +40,13 @@
 		    height: 100%;
 		    width: 0%;
 		    -webkit-transition: width $transition-speed-bg ease-out;
+		    // border-radius: $border-radius;
 		}
 
 		&:nth-child(5n + 1) {
 			&:hover {
 				a {
-					color: #FFF;
+					color: $colour1-text;
 				}
 			}
 			&:before {
@@ -50,6 +55,12 @@
 		}
 
 		&:nth-child(5n + 2) {
+			&:hover {
+				a {
+					color: $colour2-text;
+				}
+			}
+
 			&:before {
 				background: $colour2;
 			}
@@ -58,7 +69,7 @@
 		&:nth-child(5n + 3) {
 			&:hover {
 				a {
-					color: #FFF;
+					color: $colour3-text;
 				}
 			}
 			&:before {
@@ -69,7 +80,7 @@
 		&:nth-child(5n + 4) {
 			&:hover {
 				a {
-					color: #FFF;
+					color: $colour4-text;
 				}
 			}
 
@@ -82,7 +93,7 @@
 			
 			&:hover {
 				a {
-					color: #FFF;
+					color: $colour5-text;
 				}
 			}
 
@@ -91,6 +102,29 @@
 			}
 		}
 	}	
+}
+
+.nav-underline {
+	li {
+		&:before {
+			content: '';
+		    position: absolute;
+		    left: 0;
+		    bottom: 0;
+		    top: inherit;
+		    height: 5px;
+		    width: 0%;
+		    -webkit-transition: width $transition-speed-bg ease-out;
+		}
+	
+		&:nth-child(n) {
+			&:hover {
+				a {
+					color: $text-body;
+				}
+			}	
+		}	
+	}
 }
 
 .nav-mobile {

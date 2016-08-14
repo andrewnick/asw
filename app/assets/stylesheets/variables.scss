@@ -18,6 +18,7 @@ $maroon: #E56395;
 $red: #C53062;
 $blue: #4E7BB0;
 $grey: #cdd4d2;
+$white: #FFF;
 
 $colour1: $green;
 $colour2: $yellow;
@@ -25,8 +26,14 @@ $colour3: $orange;
 $colour4: $maroon;
 $colour5: $blue;
 
+$colour1-text: $white;
+$colour2-text: $text-body;
+$colour3-text: $white;
+$colour4-text: $white;
+$colour5-text: $white;
 
-$page-title: $blue;
+
+$page-title: $text-body;
 
 $device-width-sm: 568px;
 $device-width-md: 768px;
@@ -38,5 +45,7 @@ $transition-speed-text: 0.2s;
 
 $font-athiti: 'Athiti', sans-serif;
 $font-amatic: 'Amatic SC', cursive;
+
+$border-radius: 6px;
 
 
