@@ -5,13 +5,7 @@
     left: 0;
     right: 0;
     
-
-	// @include respond($device-width-sm) {
-	// }
-	// @include respond($device-width-md) {
-	// 	margin: 20px;
-	// }
-	padding: 80px 42px;
+	padding: 60px 0;
 	@include respond($device-width-sm) {
 		padding: 80px;
 	}

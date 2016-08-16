@@ -24,10 +24,10 @@
 					      <li class="rsvp-item">
 					      	<h4 class="rsvp-title"> <%= m.object.first_name %></h4>
 							<div class="rsvp-row">
-								<div class="rsvp-col">
+								<div class="rsvp-col-left">
 									<h5>Attending?</h5>
 								</div>
-								<div class="rsvp-col">
+								<div class="rsvp-col-right">
 						        	<%= m.radio_button :status, 'attending' %> 
 							    	<%= m.label :status, 'Yes', class:"rsvp-label" %>
 							    	<%= m.radio_button :status, 'not_attending' %> 
@@ -36,10 +36,10 @@
 							    </div>
 							</div>
 							<div class="rsvp-dietary rsvp-row">
-						        <div class="rsvp-col">
-									<h5>Dietary Requirements?</h5>
+						        <div class="rsvp-col-left">
+									<h5 class="rsvp-requirements">Dietary Requirements?</h5>
 								</div>
-								<div class="rsvp-col">
+								<div class="rsvp-col-right">
 							        <input type="radio" name="diet_<%= m.object.first_name %>" value="yes" class="radio-button">
 							        <%= label :diet, 'Yes', class:"rsvp-label" %>								
 							        <input type="radio" name="diet_<%= m.object.first_name %>" value="no" class="radio-button">

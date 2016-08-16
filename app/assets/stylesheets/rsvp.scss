@@ -21,9 +21,17 @@
 	}
 }
 
+// .rsvp-requirements {
+// 	word
+// }
+
 .rsvp-label {
 	margin-right: 10px;
-	font-size: 24px;
+	font-size: 20px;
+	margin-bottom: 0rem;
+	@include respond($device-width-sm) {
+		font-size: 24px;
+	}
 }
 
 .rsvp-textarea-wrapper {
@@ -78,5 +86,16 @@
 
 .rsvp-col-full {
 	flex: 0 0 100%;
+}
+
+.rsvp-col-left {
+	flex: 0 0 50%;
+}
+
+.rsvp-col-right {
+	flex: 0 0 50%;
+	display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
 }
 

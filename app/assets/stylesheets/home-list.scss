@@ -31,17 +31,25 @@
 }
 
 .home-image {
-	width: 220px;
+    width: 60%;
+    margin-top: 40px;
 	@include respond($device-width-sm) {
 		width: 420px;
+		margin-top: 0;
 	}
 }
 
 .home-nav {
 	li {
-		font-size: 48px;
 		font-family: $font-amatic;
 		text-transform: uppercase;
-		padding: 5px 45px;
+	
+		font-size: 36px;
+		padding: 5px 15px;
+		@include respond($device-width-sm) {
+			font-size: 48px;
+			padding: 5px 45px;
+		}
+
 	}
 }

@@ -27,10 +27,15 @@ html {
 	color: #333;
 	font-weight: 400;
 	font-style: normal;
-  font-size: 20px;
   line-height: 1.5;
 
 	margin: 0 auto;
+  
+  font-size: 16px;
+  @include respond($device-width-sm) {
+    font-size: 20px;
+
+  }
 }
 
 .font-athiti {
@@ -142,8 +147,11 @@ h4 {
 
 h5 {
   font-weight: 400;
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 0rem;
+  @include respond($device-width-sm) {
+    font-size: 24px;
+  }
 }
 
 p, ul, ol, pre, table, blockquote {

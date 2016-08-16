@@ -27,10 +27,17 @@ label {
 }
 
 form {
-    width: 500px;
-	margin-bottom: 100px;
+	margin-bottom: 50px;
+	width: 100%;
+	@include respond($device-width-sm) {
+    	width: 500px;
+    	margin-bottom: 100px;
+	}	
 }
 
 .form-login {
-	width: 400px;
+	width: 100%;
+	@include respond($device-width-sm) {
+		width: 400px;
+	}
 }
