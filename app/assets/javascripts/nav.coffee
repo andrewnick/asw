@@ -18,7 +18,7 @@ mobileNav = ->
 		hideShowNav()
 
 	$('.btn-mobile').on 'click', ->
-		$nav = $('.nav ul')
+		$nav = $('.nav-slide ul')
 		if $nav.css('display') == 'none'
 			$nav.velocity "slideDown", {duration: 500}
 		else
