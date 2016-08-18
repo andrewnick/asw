@@ -18,7 +18,12 @@
 	margin-top: 46px;
 	position: relative;
 	display: flex;
-    justify-content: space-between;
+    justify-content: center;
+	flex-wrap: wrap;
+	
+	@include respond($device-width-sm) {
+    	justify-content: space-between;
+	}
 
 	&:before {
 	    content: "";
