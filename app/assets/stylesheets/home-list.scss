@@ -17,7 +17,12 @@
 .home-title {
 	font-size: 48px;
 	margin-bottom: 0;
+
 	@include respond($device-width-sm) {
+		font-size: 64px;
+	}
+
+	@include respond($device-width-lg) {
 		font-size: 72px;
 	}
 }
@@ -25,17 +30,40 @@
 .home-subtitle {
 	font-size: 36px;
 	margin-bottom: 0;
+
 	@include respond($device-width-sm) {
+		font-size: 48px;
+	}
+
+	@include respond($device-width-lg) {
 		font-size: 64px;
 	}
 }
 
 .home-image {
-    width: 60%;
-    margin-top: 40px;
+    // width: 60%;
+    // margin-top: 40px;
+    width: 250px;
+    margin-top: 20px;
+
 	@include respond($device-width-sm) {
-		width: 420px;
+		width: 300px;
 		margin-top: 0;
+	}
+
+	@include respond($device-width-sm) {
+		width: 300px;
+		margin-top: 0;
+	}
+
+	@include respond($device-width-md) {
+		width: 420px;
+		margin-top: 60px;
+	}
+
+	@include respond($device-width-lg) {
+		width: 420px;
+		margin-top: 30px;
 	}
 }
 
@@ -44,9 +72,23 @@
 		font-family: $font-amatic;
 		text-transform: uppercase;
 	
-		font-size: 36px;
-		padding: 5px 15px;
+		// font-size: 36px;
+		// padding: 5px 15px;
+		// @include respond($device-width-sm) {
+		// font-size: 24px;
+		// padding: 5px 25px;
+		// }
 		@include respond($device-width-sm) {
+			font-size: 24px;
+			padding: 5px 25px;
+		}
+
+		@include respond($device-width-md) {
+			font-size: 28px;
+			padding: 5px 32px;
+		}
+
+		@include respond($device-width-lg) {
 			font-size: 48px;
 			padding: 5px 45px;
 		}

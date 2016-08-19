@@ -21,6 +21,24 @@
 		font-family: $font-amatic;
 		text-transform: uppercase;
 
+		@include respond($device-width-sm) {
+		    font-size: 20px;
+		    padding: 5px 15px;
+		    margin-top: 45px;
+		}
+
+		@include respond($device-width-md) {
+		    font-size: 24px;
+		    padding: 7px 16px;
+		    margin-top: 65px;
+		}
+
+		@include respond($device-width-lg) {
+			font-size: 36px;
+			padding: 5px 20px;
+			margin-top: 85px;
+		}
+
 		&:hover {
 
 			a {

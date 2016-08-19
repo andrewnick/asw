@@ -5,8 +5,8 @@
     left: 0;
     right: 0;
     
-	padding: 60px 0;
-	@include respond($device-width-sm) {
+	padding: 60px 0 10px;
+	@include respond($device-width-md) {
 		padding: 80px;
 	}
 
@@ -23,18 +23,19 @@
 .border-img--top {
 	top: 0;	
 	width: 103px;
-	@include respond($device-width-sm) {
+	@include respond($device-width-md) {
+		width: 150px;
+	}
+
+	@include respond($device-width-lg) {
 		width: 204px;
 	}
 }
 
 .border-img--bottom {
-	width: 102px;
-	// height: 107px;
+	width: 100px;
 	bottom: 0;	
-
-	width: 103px;
-	@include respond($device-width-sm) {
+	@include respond($device-width-md) {
 		width: 176px;
 	}
 }
