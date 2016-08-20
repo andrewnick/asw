@@ -2,7 +2,7 @@ require 'google_sheets'
 
 class GiftRegistrySheets
 	def	initialize ()
-		key = '1rx-V91LtsJzWI9TKEdZSjVSO7pOV_zNqBQlioxMad2k'
+		key = '1UMX7yGfM-anGjuyxzlHm25bpA-mUzSzsr84QkC8iaLs'
 		@gifts = Sheets.new(key, 0)
 	end
 
@@ -20,5 +20,4 @@ class GiftRegistrySheets
 		Gift.create(@gifts.get_sheet_array)
 		Gift.update_all(chosen: false);
 	end
-
 end

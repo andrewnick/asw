@@ -6,6 +6,8 @@
 	handleUpdate: (e) ->
 		if ReactDOM.findDOMNode(@refs.chosen).checked
 			user_id = @props.current_user
+		else
+			user_id = null
 
 		data =
 			chosen: ReactDOM.findDOMNode(@refs.chosen).checked
