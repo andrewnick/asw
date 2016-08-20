@@ -40,9 +40,9 @@
 									<h5 class="rsvp-requirements">Dietary Requirements?</h5>
 								</div>
 								<div class="rsvp-col-right">
-							        <input type="radio" name="diet_<%= m.object.first_name %>" value="yes" class="radio-button">
-							        <%= label :diet, 'Yes', class:"rsvp-label" %>								
-							        <input type="radio" name="diet_<%= m.object.first_name %>" value="no" class="radio-button">
+							        <input type="radio" name=<%="diet_#{m.object.first_name}_yes"%> value="yes" class="radio-button" <%=  m.object.dietary_requirements.present? ? "" : "checked" %> >
+							        <%= label :diet, 'Yes', class:"rsvp-label" %>						
+							        <input type="radio" name=<%="diet_#{m.object.first_name}_no"%> value="no" class="radio-button" <%=  m.object.dietary_requirements.blank? ? "" : "checked" %>>
 							        <%= label :diet, 'No', class:"rsvp-label" %>
 						        </div>
 						        <div class="rsvp-col-full">	

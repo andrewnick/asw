@@ -2,8 +2,9 @@ require 'google_sheets'
 
 class UserSheets
 	def initialize ()
-		key = "1vDP420tRXrghpH_2kStAawuEI-bPg36J_LIzie2XqN4"
-		@registry = Sheets.new(key)
+		# key = "1vDP420tRXrghpH_2kStAawuEI-bPg36J_LIzie2XqN4"
+		key = "1-DzJ56st411pkXWpgVJlgYl1bBnRvRPAUf4pd4NERRY"
+		@registry = Sheets.new(key, '448722155')
 	end
 
 	def get_list
@@ -12,8 +13,8 @@ class UserSheets
 
 	# family => {family_name: 'family_name', user: {first_name: name, last_name: name}}
 	def save_users()
-		User.delete_all
-		Family.delete_all
+	    User.destroy_all
+		Family.destroy_all
 		@registry.get_list.each do |item|
 			family = {}
 			user = {}
@@ -26,7 +27,7 @@ class UserSheets
 					user[key] = item.downcase
 				end
 			end
-			user['name'] = "#{user['first_name']} #{user['last_name']}"
+			user['name'] = "#{user['first_name'].strip} #{user['last_name'].strip}"
 			user['password'] = 'aswedding'
 			# user['attending'] = false
 			# family['user'] = user

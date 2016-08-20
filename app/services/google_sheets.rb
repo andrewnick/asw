@@ -1,9 +1,9 @@
 require 'google_drive'
 
 class Sheets
-	def initialize(sheet_key)
+	def initialize(sheet_key, gid)
     	@session = GoogleDrive.saved_session('config.json')
-		@ws = @session.spreadsheet_by_key(sheet_key).worksheets[0]
+		@ws = @session.spreadsheet_by_key(sheet_key).worksheet_by_gid(gid)
  	end
 
 	def get_cell(x, y)
