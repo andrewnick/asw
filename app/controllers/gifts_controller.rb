@@ -9,7 +9,7 @@ class GiftsController < ApplicationController
       else
         render json: @gift.errors, status: :unprocessable_entity
       end
-    end
+  end
 
 	def index
       @gifts = Gift.all.order("LOWER(item)")
