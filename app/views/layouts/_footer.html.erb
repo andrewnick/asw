@@ -15,8 +15,10 @@
 			</div>
 		<!-- </div> -->
 	</div>
-	<div class="footer-bottom hidden-desktop">
-		<%= mail_to "andrew.d.nicholas@gmail.com", nil, class: "link footer-link--left footer-link-bottom footer-bottom" %>
-		<%= link_to('Log Out', destroy_user_session_path, :method => :delete, class: "link footer-link--right footer-link-bottom footer-bottom") %>
-	</div>
+	<% unless current_page?(controller: 'devise/sessions', action: 'new') %>
+		<div class="footer-bottom hidden-desktop">
+			<%= mail_to "andrew.d.nicholas@gmail.com", nil, class: "link footer-link--left footer-link-bottom footer-bottom" %>
+			<%= link_to('Log Out', destroy_user_session_path, :method => :delete, class: "link footer-link--right footer-link-bottom footer-bottom") %>
+		</div>
+	<% end %>
 </footer>

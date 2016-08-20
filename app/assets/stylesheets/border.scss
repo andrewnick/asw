@@ -5,7 +5,7 @@
     left: 0;
     right: 0;
     
-	padding: 60px 0 10px;
+	padding: 60px 40px 10px;
 	@include respond($device-width-md) {
 		padding: 80px;
 	}
@@ -35,6 +35,9 @@
 .border-img--bottom {
 	width: 100px;
 	bottom: 0;	
+	@include respond($device-width-md) {
+		width: 150px;
+	}
 	@include respond($device-width-md) {
 		width: 176px;
 	}

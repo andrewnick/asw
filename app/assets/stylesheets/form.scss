@@ -41,3 +41,11 @@ form {
 		width: 400px;
 	}
 }
+
+.field-login {
+	flex-wrap: wrap;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}

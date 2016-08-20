@@ -14,8 +14,11 @@ hideShowNav = ->
 
 mobileNav = ->
 	hideShowNav()
+	width = $(window).width()
 	$(window).on 'resize', ->
-		hideShowNav()
+		if $(@).width() != width
+			width = $(@).width()
+			hideShowNav()
 
 	$('.btn-mobile').on 'click', ->
 		$nav = $('.nav-slide ul')

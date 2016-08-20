@@ -1,18 +1,18 @@
 <div class="container login-container">
   <div class="container-center">
-    <h1 class='text-center'>Andrew and Sarah's Wedding</h1>
+    <h1 class='text-center home-title'>Sarah and Andrew's Wedding</h1>
   </div>
   <div class="container-center">
-    <h2 class='text-center'>Log In</h2>
+    <h2 class='text-center home-subtitle'>Log In</h2>
   </div>
   <div class="container-center">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'form-login' }) do |f| %>
-      <div class="field">
+      <div class="field field-login">
         <%= f.label :name, class: "font-amatic" %> <br class="hidden-desktop">
         <%= f.text_field :name, autofocus: true %>
       </div>
 
-      <div class="field">
+      <div class="field field-login m0">
         <%= f.label :password, class: "font-amatic" %> <br class="hidden-desktop">
         <%= f.password_field :password, autocomplete: "off" %>
       </div>

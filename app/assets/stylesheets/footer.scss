@@ -1,11 +1,12 @@
 .footer {
-	// margin: 0px;
-	// display: flex;
-	// justify-content: center;
-	// position: absolute;
- //    left: 0;
- //    right: 0;
- //    flex-wrap: wrap;
+    width: 100%;
+	margin: 0px;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    flex-wrap: wrap;
+   	position: absolute;
 }
 
 .footer-img {
@@ -25,9 +26,6 @@
     left: 0;
     right: 0;
     flex-wrap: wrap;
-    @include respond($device-width-md) {
-   		position: absolute;
-   	}
 }
 
 .footer-bottom {
@@ -83,7 +81,4 @@
 
 .footer-link-bottom {
 	margin: 0;
-	// @include respond($device-width-md) {
-	// 	margin-left: 20px;
-	// }
 }
