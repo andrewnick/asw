@@ -17,6 +17,6 @@ namespace :gift do
 
   task :remove_users => :environment do
   	@gifts = Gift.all
-  	@gifts.update(user_id: nil)
+  	@gifts.update(user_id: :nil)
   end
 end
