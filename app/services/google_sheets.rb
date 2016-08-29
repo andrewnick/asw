@@ -36,6 +36,12 @@ class Sheets
 		@ws.list
 	end
 
+	def get_ws
+		@ws
+	end
+
+
+
 
 
 	# family => {family_name: 'family_name', user: {first_name: name, last_name: name}}

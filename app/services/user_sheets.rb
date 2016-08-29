@@ -3,8 +3,8 @@ require 'google_sheets'
 class UserSheets
 	def initialize ()
 		# key = "1vDP420tRXrghpH_2kStAawuEI-bPg36J_LIzie2XqN4"
-		key = "1-DzJ56st411pkXWpgVJlgYl1bBnRvRPAUf4pd4NERRY"
-		@registry = Sheets.new(key, '448722155')
+		key = "107-G0Q_rTyEEc4NzJFsZ-tyhXLR7EjJ9VaIEXDd8oIw"
+		@registry = Sheets.new(key, "0")
 	end
 
 	def get_list
@@ -37,5 +37,22 @@ class UserSheets
 		end
 	end	
 
+	def pull_from_db
+		@ws = @registry.get_ws()
+		i = 1
+		@ws[1,1] = "Name"
+		@ws[1,2] = "Attending"
+		@ws[1,3] = "Dietary Requirements"
+		@ws[1,4] = "Sign In Count"
+
+		User.all.order(id: :asc).each_with_index do |user, index|
+			puts user.name
+			@ws[index + 2, 1] = user.name
+			@ws[index + 2, 2] = user.status
+			@ws[index + 2, 3] = user.dietary_requirements
+			@ws[index + 2, 4] = user.sign_in_count
+		end
+		@ws.save
+	end
 
 end
