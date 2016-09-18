@@ -19,4 +19,37 @@ namespace :user do
     sheet.pull_from_db()
   end
 
+  task :add_users => :environment do
+    users = [
+      {
+        first: "wendy",
+        last: "hunt",
+        family: "WJHunt"
+      },
+      {
+        first: "josh",
+        last: 'hunt',
+        family: "WJHunt"
+      },
+      {
+        first: "laura",
+        last: "robb",
+        family: "LRobb"
+      },
+      {
+        first: "gareth",
+        last: "corder",
+        family: "LRobb"
+      }
+    ]
+    
+
+    users.each do |u|
+      name = "#{u[:first]} #{u[:last]}"
+      family = Family.find_or_create_by!(family_name: u[:family])
+      user = User.create!(first_name: u[:first], last_name: u[:last], family_id: family.id, name: name, :password => "aswedding")
+      puts "Created user #{u[:first]} #{u[:last]}"
+    end
+  end
+
 end
