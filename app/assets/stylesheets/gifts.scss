@@ -13,6 +13,11 @@
 		   -moz-columns: 3;
 		        columns: 3;
 	}
+
+	h3 {
+		text-align: center;
+    	width: 100%;
+	}
 }
 
 .gift-item {
@@ -38,6 +43,13 @@
 		cursor: pointer;
 		width: auto;
 		margin-bottom: 0;
+
+		&.no-click {
+			&:before {
+				height: 0;
+				background-color: transparent;
+			}
+		}
 
 		&:hover {
 
@@ -138,10 +150,36 @@
 				}
 			}
 		}
+
+		&.no-click {
+			cursor: auto;			
+
+			&:hover {
+				:before {
+					background-color: transparent;
+				}
+			}
+		}
 	}
 }
 
 .gift-item-label {
 	cursor: pointer;
+}
+
+.no-click-gift {
+	width: 100%;
+
+	@include respond($device-width-sm) {
+		-webkit-columns: 2;
+		   -moz-columns: 2;
+		        columns: 2;
+	}
+
+	@include respond($device-width-md) {
+		-webkit-columns: 3;
+		   -moz-columns: 3;
+		        columns: 3;
+	}
 }
 
