@@ -18,4 +18,5 @@
 //= require components
 //= require toastr
 //= require velocity
+//= require gifts
 //= require_tree .

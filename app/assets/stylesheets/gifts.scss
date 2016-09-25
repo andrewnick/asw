@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .gifts {
+	margin-bottom: 20px;
 	@include respond($device-width-sm) {
 		-webkit-columns: 2;
 		   -moz-columns: 2;
@@ -43,8 +44,10 @@
 		cursor: pointer;
 		width: auto;
 		margin-bottom: 0;
+		width: 300px;
 
 		&.no-click {
+			max-width: 300px;
 			&:before {
 				height: 0;
 				background-color: transparent;
