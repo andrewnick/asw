@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
 
 	belongs_to :family
 
+	has_many :gifts
+
   	enum status: [ :no_reply, :attending, :not_attending ]
 
 	def name
